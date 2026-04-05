@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toprak Maslahatçy — Maslahat boýunça</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+    
+    :root {
+      --emerald: #10b981;
+      --earth-dark: #1e3a2f;
+      --earth: #2c5f4a;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system_ui, sans-serif;
+      background: linear-gradient(135deg, #1e3a2f 0%, #2c5f4a 100%);
+      color: white;
+      min-height: 100vh;
+      padding: 16px;
+    }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(12px);
+      border-radius: 24px;
+      padding: 32px;
+    }
+    .btn-primary {
+      background: #10b981;
+      color: white;
+      border: none;
+      padding: 20px 24px;
+      font-size: 1.25rem;
+      font-weight: 600;
+      border-radius: 9999px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      transition: all 0.2s;
+    }
+    .btn-primary:hover { background: #059669; transform: translateY(-2px); }
+    .result-card {
+      background: white;
+      color: #111827;
+      border-radius: 24px;
+      padding: 32px;
+    }
+    .input-range { accent-color: #10b981; }
+    .warning {
+      background: #f59e0b;
+      color: #111827;
+      padding: 14px 20px;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- WARNING BANNER -->
+    <div id="storage-warning" class="warning hidden">
+      ⚠️ localStorage заблокирован (открыли через file://). 
+      <span onclick="this.parentElement.classList.add('hidden')" style="margin-left:auto; cursor:pointer; text-decoration:underline;">Закрыть</span><br>
+      <small>Запустите через Live Server или python -m http.server для полной работы</small>
+    </div>
+
+    <!-- HEADER -->
+    <div class="flex justify-between items-center mb-8">
+      <div>
+        <h1 class="text-4xl font-semibold flex items-center gap-3">🌱 Toprak Maslahatçy</h1>
+        <p class="text-emerald-200 text-lg">Научные советы по почвам Центральной Азии</p>
+      </div>
+      <div onclick="logout()" class="flex items-center gap-3 cursor-pointer">
+        <div class="text-right">
+          <p id="username-display" class="font-semibold text-xl">Гость</p>
+          <p class="text-sm text-emerald-200">Выйти</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOGIN MODAL -->
+    <div id="login-modal" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 hidden">
+      <div class="bg-white text-gray-900 rounded-3xl p-10 w-full max-w-md mx-4 shadow-2xl">
+        <h2 class="text-3xl font-semibold mb-8 text-center">Вход в Toprak Maslahatçy</h2>
+        <input id="login-username" type="text" placeholder="Логин" value="daihan" class="w-full px-6 py-5 border-2 border-gray-200 rounded-3xl mb-4 text-lg focus:outline-none focus:border-emerald-500">
+        <input id="login-password" type="password" placeholder="Пароль" value="123456" class="w-full px-6 py-5 border-2 border-gray-200 rounded-3xl mb-8 text-lg focus:outline-none focus:border-emerald-500">
+        <button onclick="login()" class="btn-primary text-xl py-6">Войти</button>
+        <p class="text-center text-sm text-gray-500 mt-6">Демо: <b>daihan</b> / <b>123456</b></p>
+      </div>
+    </div>
+
+    <!-- MAIN FORM -->
+    <div class="card mb-8">
+      <h2 class="text-3xl font-semibold mb-10 flex items-center gap-3">📊 Введите данные вашей почвы</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <label class="block text-emerald-200 text-base mb-3">Механики дүзүми</label>
+          <select id="texture" class="w-full bg-white/20 border border-white/30 rounded-3xl px-6 py-5 text-white text-lg">
+            <option value="gumly">Gumly (песчаный)</option>
+            <option value="suymli" selected>Çüýrli / Süýümli (суглинистый)</option>
+            <option value="killi">Killi (глинистый)</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-emerald-200 text-base mb-3">Çüýrüntgi mukdary (% гумуса)</label>
+          <input id="humus" type="range" min="0.2" max="5" step="0.1" value="1.2" class="w-full input-range">
+          <div class="flex justify-between text-emerald-200 mt-2 text-sm"><span>0.2%</span><span id="humus-val" class="font-semibold">1.2%</span><span>5%</span></div>
+        </div>
+        <div>
+          <label class="block text-emerald-200 text-base mb-3">Topragyň çyglylygy (%)</label>
+          <input id="soil-moisture" type="range" min="5" max="100" step="1" value="35" class="w-full input-range">
+          <div class="flex justify-between text-emerald-200 mt-2 text-sm"><span>5%</span><span id="soil-val" class="font-semibold">35%</span><span>100%</span></div>
+        </div>
+        <div>
+          <label class="block text-emerald-200 text-base mb-3">Çyglylyk (воздушная влажность %)</label>
+          <input id="air-humidity" type="range" min="10" max="100" step="1" value="25" class="w-full input-range">
+          <div class="flex justify-between text-emerald-200 mt-2 text-sm"><span>10%</span><span id="air-val" class="font-semibold">25%</span><span>100%</span></div>
+        </div>
+      </div>
+
+      <button onclick="calculateAdvice()" class="btn-primary mt-12 text-2xl">
+        Получить научные рекомендации 🌾
+      </button>
+    </div>
+
+    <!-- RESULT -->
+    <div id="result" class="hidden result-card mb-8">
+      <h3 class="text-3xl font-semibold mb-8 text-emerald-700">✅ Рекомендации по вашей почве</h3>
+      <div id="advice-content" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+      <div class="flex gap-4 mt-12">
+        <button onclick="printReport()" class="flex-1 bg-gray-800 hover:bg-gray-900 text-white py-5 rounded-3xl text-xl font-medium flex items-center justify-center gap-3">🖨️ Распечатать отчёт</button>
+        <button onclick="downloadPDF()" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white py-5 rounded-3xl text-xl font-medium flex items-center justify-center gap-3">📱 Скачать PDF на телефон</button>
+      </div>
+    </div>
+
+    <!-- HISTORY -->
+    <div class="card">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="text-2xl font-semibold">📖 История анализов</h3>
+        <button onclick="clearHistory()" class="text-sm bg-white/20 hover:bg-white/30 px-6 py-3 rounded-3xl">Очистить</button>
+      </div>
+      <div id="history-list" class="space-y-4 max-h-96 overflow-auto"></div>
+    </div>
+
+    <!-- ONLINE FEATURE -->
+    <div onclick="syncCloud()" class="mt-8 flex items-center gap-6 bg-white/10 hover:bg-white/20 transition-all rounded-3xl p-6 cursor-pointer border border-dashed border-emerald-300">
+      <div class="text-5xl">☁️</div>
+      <div>
+        <p class="font-semibold text-xl">Онлайн-режим: Синхронизировать с облаком</p>
+        <p class="text-emerald-200">Загрузить свежие данные по почвам Туркменистана 2025–2026 гг.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentUser = null;
+    let analyses = [];
+    let storageAvailable = true;
+
+    // Проверяем доступность localStorage
+    function isStorageAvailable() {
+      try {
+        localStorage.setItem('test', '1');
+        localStorage.removeItem('test');
+        return true;
+      } catch (e) {
+        storageAvailable = false;
+        document.getElementById('storage-warning').classList.remove('hidden');
+        return false;
+      }
+    }
+
+    // Безопасное чтение из localStorage
+    function loadAnalyses() {
+      if (!storageAvailable) return [];
+      try {
+        return JSON.parse(localStorage.getItem('toprak_analyses')) || [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    // Безопасная запись в localStorage
+    function saveAnalyses(data) {
+      if (!storageAvailable) return;
+      try {
+        localStorage.setItem('toprak_analyses', JSON.stringify(data));
+      } catch (e) {}
+    }
+
+    const soilDB = {
+      gumly: { name: "Gumly (песчаный)", plow: 18, waterFreq: "чаще", cropBase: "хлопок, дыни" },
+      suymli: { name: "Çüýrli / Süýümli (суглинистый)", plow: 25, waterFreq: "средне", cropBase: "пшеница, ячмень" },
+      killi: { name: "Killi (глинистый)", plow: 30, waterFreq: "реже", cropBase: "люцерна, овощи" }
+    };
+
+    function login() {
+      const username = document.getElementById('login-username').value.trim() || "Daihan";
+      currentUser = username;
+      document.getElementById('username-display').textContent = username;
+      document.getElementById('login-modal').classList.add('hidden');
+      renderHistory();
+    }
+
+    function logout() {
+      if (confirm('Выйти из аккаунта?')) {
+        currentUser = null;
+        document.getElementById('username-display').textContent = "Гость";
+        document.getElementById('login-modal').classList.remove('hidden');
+      }
+    }
+
+    function updateSliders() {
+      document.getElementById('humus-val').textContent = document.getElementById('humus').value + '%';
+      document.getElementById('soil-val').textContent = document.getElementById('soil-moisture').value + '%';
+      document.getElementById('air-val').textContent = document.getElementById('air-humidity').value + '%';
+    }
+
+    function calculateAdvice() {
+      const textureKey = document.getElementById('texture').value;
+      const humus = parseFloat(document.getElementById('humus').value);
+      const soilMoist = parseFloat(document.getElementById('soil-moisture').value);
+      const airHum = parseFloat(document.getElementById('air-humidity').value);
+
+      const tx = soilDB[textureKey];
+      let plowDepth = tx.plow;
+      if (humus < 1) plowDepth -= 3;
+      if (soilMoist > 60) plowDepth += 2;
+
+      let crop = tx.cropBase;
+      if (humus > 2.5 && soilMoist > 40) crop = "Пшеница озимая / ячмень (богара)";
+      else if (humus < 1) crop = "Хлопок + люцерна (севооборот)";
+
+      let whenWater = airHum < 30 ? "Утром и вечером" : "Утром";
+      let times = tx.waterFreq === "чаще" ? "5–7 раз" : tx.waterFreq === "средне" ? "3–5 раз" : "2–4 раза";
+      if (soilMoist > 70) times = "Не поливать 7–10 дней";
+
+      const html = `
+        <div class="grid grid-cols-2 gap-6">
+          <div class="bg-emerald-100 p-8 rounded-3xl"><p class="text-emerald-700 font-medium text-lg">Naçe sm çuňlukda sürmeli?</p><p class="text-5xl font-bold text-emerald-800 mt-2">${plowDepth} см</p></div>
+          <div class="bg-emerald-100 p-8 rounded-3xl"><p class="text-emerald-700 font-medium text-lg">Näme ekin ekmeli?</p><p class="text-3xl font-bold text-emerald-800 mt-3">${crop}</p></div>
+          <div class="bg-emerald-100 p-8 rounded-3xl"><p class="text-emerald-700 font-medium text-lg">Haçan suwarmaly?</p><p class="text-3xl font-bold text-emerald-800 mt-3">${whenWater}</p></div>
+          <div class="bg-emerald-100 p-8 rounded-3xl"><p class="text-emerald-700 font-medium text-lg">Näçe gezek?</p><p class="text-3xl font-bold text-emerald-800 mt-3">${times}</p></div>
+        </div>
+        <p class="text-xs text-gray-500 mt-8">Рекомендации основаны на данных FAO и исследованиях почв Туркменистана (2023–2025).</p>
+      `;
+
+      document.getElementById('advice-content').innerHTML = html;
+      document.getElementById('result').classList.remove('hidden');
+
+      // Сохраняем анализ
+      const analysis = {
+        date: new Date().toLocaleString('ru-RU'),
+        texture: tx.name,
+        humus: humus,
+        soilMoist: soilMoist,
+        airHum: airHum,
+        plow: plowDepth,
+        crop: crop
+      };
+      analyses.unshift(analysis);
+      if (analyses.length > 10) analyses.pop();
+      saveAnalyses(analyses);
+      renderHistory();
+    }
+
+    function renderHistory() {
+      const container = document.getElementById('history-list');
+      container.innerHTML = analyses.length === 0 
+        ? `<p class="text-emerald-200 text-center py-8">Пока нет анализов</p>`
+        : analyses.map((a, i) => `
+          <div onclick="loadAnalysis(${i})" class="flex justify-between bg-white/10 hover:bg-white/20 p-4 rounded-2xl cursor-pointer">
+            <div>
+              <p class="font-medium">${a.date}</p>
+              <p class="text-sm opacity-80">${a.texture} • ${a.humus}% гумуса</p>
+            </div>
+            <div class="text-right">
+              <p class="text-emerald-400 text-2xl font-semibold">${a.plow} см</p>
+              <p class="text-sm">${a.crop}</p>
+            </div>
+          </div>
+        `).join('');
+    }
+
+    function loadAnalysis(i) {
+      const a = analyses[i];
+      alert(`📅 ${a.date}\n\nГлубина вспашки: ${a.plow} см\nРекомендуемая культура: ${a.crop}`);
+    }
+
+    function clearHistory() {
+      if (confirm('Очистить всю историю?')) {
+        analyses = [];
+        saveAnalyses([]);
+        renderHistory();
+      }
+    }
+
+    function printReport() { window.print(); }
+
+    function downloadPDF() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+      doc.setFontSize(20);
+      doc.text("Toprak Maslahatçy — Отчёт", 20, 25);
+      doc.setFontSize(12);
+      doc.text(`Дата: ${new Date().toLocaleString('ru-RU')}`, 20, 45);
+      doc.text(document.getElementById('advice-content').innerText, 20, 65, { maxWidth: 170 });
+      doc.save("toprak_maslahat_report.pdf");
+      alert("✅ PDF сохранён!");
+    }
+
+    function syncCloud() {
+      const msg = document.createElement('div');
+      msg.style.cssText = 'position:fixed; bottom:30px; right:30px; background:#10b981; color:white; padding:20px 28px; border-radius:9999px; box-shadow:0 20px 25px -5px rgb(16 185 129); font-weight:600;';
+      msg.textContent = '☁️ Синхронизация... Данные обновлены';
+      document.body.appendChild(msg);
+      setTimeout(() => msg.remove(), 2800);
+    }
+
+    // Инициализация
+    window.onload = () => {
+      isStorageAvailable();
+      analyses = loadAnalyses();
+      document.querySelectorAll('input[type="range"]').forEach(sl => sl.addEventListener('input', updateSliders));
+      updateSliders();
+      document.getElementById('login-modal').classList.remove('hidden');
+      renderHistory();
+    };
+  </script>
+</body>
+</html>

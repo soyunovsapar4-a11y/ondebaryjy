@@ -1,0 +1,26 @@
+# robots.txt — ÖŇDE BARYJY ÝYLADYŞHANA
+# Author: yesenow dayanc
+# https://your-username.github.io/onde-baryjy-yyladyshhana/
+
+User-agent: *
+Allow: /
+
+# Все разделы открыты для индексации
+Allow: /index.html
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /manifest.json
+
+# Запрещаем служебные файлы
+Disallow: /sw.js
+
+# Sitemap
+Sitemap: https://your-username.github.io/onde-baryjy-yyladyshhana/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Yandex
+User-agent: Yandex
+Crawl-delay: 2

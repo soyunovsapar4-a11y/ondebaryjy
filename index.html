@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ru" id="htmlRoot">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>ÖŇDE BARYJY ÝYLADYŞHANA — Pestisidler, Tozanlaşdyryjylar, Merkezi Aziýa</title>
+
+<!-- ===== SEO PRIMARY ===== -->
+<meta name="description" content="ÖŇDE BARYJY ÝYLADYŞHANA — Merkezi Aziýanyň öňdebaryjy ýyladyşhanasy. Ylmy gollanma: pestisidler, tozanlaşdyryjylar, miweli ekinler. Ru/En/Tk. Author: yesenow dayanc"/>
+<meta name="keywords" content="пестициды, опылители, теплица, Центральная Азия, ÖŇDE BARYJY ÝYLADYŞHANA, ýyladyşhana, pestisidler, tozanlaşdyryjylar, неоникотиноиды, пчёлы, шмели, яблоня, greenhouse, pollinators, Central Asia"/>
+<meta name="author" content="yesenow dayanc"/>
+<meta name="robots" content="index, follow, max-image-preview:large"/>
+<meta name="language" content="ru"/>
+<meta name="geo.region" content="TM;KZ;UZ;KG;TJ"/>
+<meta name="geo.placename" content="Central Asia"/>
+
+<!-- ===== GOOGLE SEARCH CONSOLE — замените на ваш код ===== -->
+<meta name="google-site-verification" content="ВСТАВЬТЕ_ВАШ_VERIFICATION_CODE_ЗДЕСЬ"/>
+
+<!-- ===== OPEN GRAPH ===== -->
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="ru_RU"/>
+<meta property="og:title" content="ÖŇDE BARYJY ÝYLADYŞHANA — Pestisidler & Tozanlaşdyryjylar"/>
+<meta property="og:description" content="Ylmy gollanma we öňdebaryjy oba hojalyk platformasy. Ru/En/Tk. Author: yesenow dayanc"/>
+<meta property="og:url" content="https://your-username.github.io/"/>
+<meta property="og:site_name" content="ÖŇDE BARYJY ÝYLADYŞHANA"/>
+
+<!-- ===== TWITTER ===== -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="ÖŇDE BARYJY ÝYLADYŞHANA"/>
+<meta name="twitter:description" content="Merkezi Aziýanyň öňdebaryjy ýyladyşhana platformasy. Ylym · Agronomiya · ЦА"/>
+
+<!-- ===== CANONICAL ===== -->
+<link rel="canonical" href="https://your-username.github.io/"/>
+
+<!-- ===== PWA ===== -->
+<link rel="manifest" href="manifest.json"/>
+<meta name="theme-color" content="#2e7d32"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="ÖŇDE BARYJY"/>
+
+<!-- ===== FAVICON ===== -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232e7d32'/><text y='.9em' font-size='70' x='15'>🌱</text></svg>"/>
+
+<!-- ===== JSON-LD ===== -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"ÖŇDE BARYJY ÝYLADYŞHANA","description":"Scientific reference platform on pesticides and pollinators for Central Asian agriculture. Author: yesenow dayanc","url":"https://your-username.github.io/","inLanguage":["ru","en","tk"],"author":{"@type":"Person","name":"yesenow dayanc"}}
+</script>
+
+<!-- ===== FONTS & ICONS ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar" role="navigation">
+  <a href="#" class="navbar-brand" onclick="showPage('home');return false">
+    <div class="brand-logo">🌱</div>
+    <div class="brand-text">
+      <span class="brand-main">ÖŇDE BARYJY ÝYLADYŞHANA</span>
+      <span class="brand-sub" data-i18n="appSub">Merkezi Aziýanyň öňdebaryjy ýyladyşhanasy</span>
+    </div>
+  </a>
+
+  <div class="nav-center" id="navCenter">
+    <ul class="nav-links">
+      <li><a href="#" onclick="showPage('home');return false" data-page="home" class="active"><i class="fas fa-home"></i> <span data-i18n="nav_home">Главная</span></a></li>
+      <li><a href="#" onclick="showPage('pesticides');return false" data-page="pesticides"><i class="fas fa-flask"></i> <span data-i18n="nav_pesticides">Пестициды</span></a></li>
+      <li><a href="#" onclick="showPage('pollinators');return false" data-page="pollinators"><i class="fas fa-bug"></i> <span data-i18n="nav_pollinators">Опылители</span></a></li>
+      <li><a href="#" onclick="showPage('fruits');return false" data-page="fruits"><i class="fas fa-apple-alt"></i> <span data-i18n="nav_fruits">Культуры</span></a></li>
+      <li><a href="#" onclick="showPage('risks');return false" data-page="risks"><i class="fas fa-exclamation-triangle"></i> <span data-i18n="nav_risks">Риски</span></a></li>
+      <li><a href="#" onclick="showPage('calculator');return false" data-page="calculator"><i class="fas fa-calculator"></i> <span data-i18n="nav_calc">Калькулятор</span></a></li>
+      <li><a href="#" onclick="showPage('archive');return false" data-page="archive"><i class="fas fa-archive"></i> <span data-i18n="nav_archive">Архив</span></a></li>
+      <li><a href="#" onclick="showPage('seo');return false" data-page="seo"><i class="fas fa-search"></i> <span data-i18n="nav_seo">SEO Гид</span></a></li>
+      <li><a href="#" onclick="showPage('references');return false" data-page="references"><i class="fas fa-book"></i> <span data-i18n="nav_refs">Источники</span></a></li>
+    </ul>
+  </div>
+
+  <div class="nav-right">
+    <button class="btn-search-nav" onclick="openModal('globalSearchModal');setTimeout(()=>document.getElementById('globalSearchInput')?.focus(),100)" title="Поиск"><i class="fas fa-search"></i></button>
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="ru" onclick="setLang('ru')">RU</button>
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" data-lang="tk" onclick="setLang('tk')">TK</button>
+    </div>
+    <div id="navAuthArea" style="display:flex;gap:.5rem;position:relative"></div>
+  </div>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ========== MODALS ========== -->
+<!-- LOGIN -->
+<div id="loginModal" class="modal-overlay">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>🔐 <span data-i18n="loginTitle">Добро пожаловать</span></h3>
+      <button class="modal-close" onclick="closeModal('loginModal')">✕</button>
+    </div>
+    <form onsubmit="handleLogin(event)">
+      <div class="form-group">
+        <label class="form-label" data-i18n="email">Email</label>
+        <input id="loginEmail" class="form-input" type="email" required placeholder="name@example.com" autocomplete="username"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-i18n="password">Пароль</label>
+        <input id="loginPass" class="form-input" type="password" required placeholder="••••••" autocomplete="current-password"/>
+      </div>
+      <p id="loginErr" class="form-error"></p>
+      <button class="btn btn-primary" type="submit" style="width:100%;margin-top:.5rem">
+        <i class="fas fa-sign-in-alt"></i> <span data-i18n="login">Войти</span>
+      </button>
+    </form>
+    <div class="form-divider"><span data-i18n="noAccount">Нет аккаунта?</span></div>
+    <button class="btn btn-outline" style="width:100%" onclick="closeModal('loginModal');openModal('registerModal')">
+      <i class="fas fa-user-plus"></i> <span data-i18n="register">Регистрация</span>
+    </button>
+  </div>
+</div>
+
+<!-- REGISTER -->
+<div id="registerModal" class="modal-overlay">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>🌱 <span data-i18n="registerTitle">Создать аккаунт</span></h3>
+      <button class="modal-close" onclick="closeModal('registerModal')">✕</button>
+    </div>
+    <form onsubmit="handleRegister(event)">
+      <div class="form-group">
+        <label class="form-label" data-i18n="name">Имя</label>
+        <input id="regName" class="form-input" type="text" required placeholder="Ваше имя"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-i18n="email">Email</label>
+        <input id="regEmail" class="form-input" type="email" required placeholder="name@example.com" autocomplete="username"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-i18n="password">Пароль</label>
+        <input id="regPass" class="form-input" type="password" required placeholder="Мин. 6 символов" autocomplete="new-password"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-i18n="confirmPass">Подтвердите пароль</label>
+        <input id="regPass2" class="form-input" type="password" required placeholder="••••••" autocomplete="new-password"/>
+      </div>
+      <p id="regErr" class="form-error"></p>
+      <button class="btn btn-primary" type="submit" style="width:100%;margin-top:.5rem">
+        <i class="fas fa-user-plus"></i> <span data-i18n="register">Регистрация</span>
+      </button>
+    </form>
+    <div class="form-divider"><span data-i18n="hasAccount">Уже есть аккаунт?</span></div>
+    <button class="btn btn-outline" style="width:100%" onclick="closeModal('registerModal');openModal('loginModal')">
+      <i class="fas fa-sign-in-alt"></i> <span data-i18n="login">Войти</span>
+    </button>
+  </div>
+</div>
+
+<!-- ADD POST -->
+<div id="addPostModal" class="modal-overlay">
+  <div class="modal" style="max-width:560px">
+    <div class="modal-head">
+      <h3>✏️ <span data-i18n="arch_add">Добавить запись</span></h3>
+      <button class="modal-close" onclick="closeModal('addPostModal')">✕</button>
+    </div>
+    <form onsubmit="submitArchivePost(event)">
+      <div class="form-group">
+        <label class="form-label" data-i18n="arch_type">Тип записи</label>
+        <select id="newPostType" class="form-select">
+          <option>Исследование</option><option>Наблюдение</option>
+          <option>Рекомендация</option><option>Данные поля</option><option>Вопрос</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-i18n="arch_caption">Заголовок</label>
+        <input id="newPostTitle" class="form-input" type="text" required placeholder="Краткий заголовок..."/>
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-i18n="arch_body">Описание / данные</label>
+        <textarea id="newPostBody" class="form-textarea" required placeholder="Подробное описание, данные, наблюдения..."></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-i18n="arch_tags">Теги</label>
+        <input id="newPostTags" class="form-input" placeholder="пчёлы, теплица, ЦА..."/>
+        <span class="form-helper" data-i18n="arch_tags">Через запятую</span>
+      </div>
+      <button class="btn btn-primary" type="submit" style="width:100%">
+        <i class="fas fa-paper-plane"></i> <span data-i18n="arch_submit">Опубликовать</span>
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- EDIT POST -->
+<div id="editPostModal" class="modal-overlay">
+  <div class="modal" style="max-width:560px">
+    <div class="modal-head">
+      <h3>✏️ <span data-i18n="arch_edit">Редактировать запись</span></h3>
+      <button class="modal-close" onclick="closeModal('editPostModal')">✕</button>
+    </div>
+    <form onsubmit="submitEditPost(event)">
+      <input type="hidden" id="editPostId"/>
+      <div class="form-group">
+        <label class="form-label" data-i18n="arch_type">Тип записи</label>
+        <select id="editPostType" class="form-select">
+          <option>Исследование</option><option>Наблюдение</option>
+          <option>Рекомендация</option><option>Данные поля</option><option>Вопрос</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-i18n="arch_caption">Заголовок</label>
+        <input id="editPostTitle" class="form-input" type="text" required placeholder="Краткий заголовок..."/>
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-i18n="arch_body">Описание / данные</label>
+        <textarea id="editPostBody" class="form-textarea" required placeholder="Подробное описание, данные, наблюдения..."></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-label" data-i18n="arch_tags">Теги (через запятую)</label>
+        <input id="editPostTags" class="form-input" placeholder="пчёлы, теплица, ЦА..."/>
+      </div>
+      <div style="display:flex;gap:.7rem;margin-top:.5rem">
+        <button class="btn btn-primary" type="submit" style="flex:1"><i class="fas fa-save"></i> <span data-i18n="save">Сохранить</span></button>
+        <button class="btn btn-outline" type="button" onclick="closeModal('editPostModal')" style="flex:0 0 auto" data-i18n="cancel">Отмена</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- GLOBAL SEARCH -->
+<div id="globalSearchModal" class="modal-overlay">
+  <div class="modal" style="max-width:620px;max-height:80vh;overflow-y:auto">
+    <div class="modal-head" style="position:sticky;top:0;background:var(--c-card);z-index:2">
+      <h3>🔍 <span data-i18n="nav_search">Поиск по сайту</span></h3>
+      <button class="modal-close" onclick="closeModal('globalSearchModal')">✕</button>
+    </div>
+    <div class="search-wrap" style="margin:0 0 1rem">
+      <span class="search-icon"><i class="fas fa-search"></i></span>
+      <input type="text" id="globalSearchInput" class="search-input" placeholder="Поиск по всему сайту..." oninput="runGlobalSearch(this.value)" autofocus/>
+    </div>
+    <div id="globalSearchResults" style="min-height:80px"></div>
+  </div>
+</div>
+
+<!-- ========== MAIN ========== -->
+<main>
+
+<!-- ===================== HOME ===================== -->
+<div id="page-home" class="page active">
+  <section class="hero">
+    <canvas id="heroCanvas" class="hero-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge" data-i18n="hero_badge">🌱 Научный справочник · ЦА · 2024</div>
+      <h1 class="hero-title">ÖŇDE BARYJY<br>ÝYLADYŞHANA</h1>
+      <p class="hero-subtitle-app" data-i18n="appSub">Merkezi Aziýanyň öňdebaryjy ýyladyşhanasy</p>
+      <p class="hero-desc" data-i18n="hero_desc">Детальное исследование взаимодействия пестицидов с опылителями в сельском хозяйстве Центральной Азии. Данные, таблицы, калькуляторы для агрономов и фермеров.</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="num" data-i18n="stat1_num">6+</span><span class="lbl" data-i18n="stat1_lbl">Классов</span></div>
+        <div class="hero-stat"><span class="num" data-i18n="stat2_num">5</span><span class="lbl" data-i18n="stat2_lbl">Опылителей</span></div>
+        <div class="hero-stat"><span class="num" data-i18n="stat3_num">26%</span><span class="lbl" data-i18n="stat3_lbl">Прирост</span></div>
+        <div class="hero-stat"><span class="num" data-i18n="stat4_num">20+</span><span class="lbl" data-i18n="stat4_lbl">Источников</span></div>
+      </div>
+      <div class="hero-cta">
+        <a href="#" class="btn btn-primary" onclick="showPage('pesticides');return false"><i class="fas fa-flask"></i> <span data-i18n="hero_btn1">Изучить пестициды</span></a>
+        <a href="#" class="btn btn-gold" onclick="showPage('calculator');return false"><i class="fas fa-calculator"></i> <span data-i18n="hero_btn2">Калькулятор</span></a>
+        <a href="#" class="btn btn-outline" onclick="showPage('archive');return false"><i class="fas fa-archive"></i> Архив</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-title"><h2>О платформе</h2><div class="line"></div><p>Все разделы справочника</p></div>
+      <div class="cards-grid">
+        <div class="card card-stripe" onclick="showPage('pesticides')" style="cursor:pointer"><span class="card-icon">🧪</span><h3 data-i18n="page_pesticides">Пестициды</h3><p>Неоникотиноиды, пиретроиды, ФОС, карбаматы, фунгициды, гербициды, акарициды. Таблицы LD50 и механизмы действия.</p><div style="margin-top:.8rem"><span class="tag tag-red">Высокая токсич.</span><span class="tag tag-green">Безопасные</span></div></div>
+        <div class="card card-stripe" onclick="showPage('pollinators')" style="cursor:pointer"><span class="card-icon">🐝</span><h3 data-i18n="page_pollinators">Опылители</h3><p>Apis mellifera, Bombus, Osmia, Andrena, Halictus. Сезонный календарь и температурные пороги для ЦА.</p><div style="margin-top:.8rem"><span class="tag tag-gold">5 групп</span><span class="tag tag-blue">Графики</span></div></div>
+        <div class="card card-stripe" onclick="showPage('fruits')" style="cursor:pointer"><span class="card-icon">🍎</span><h3 data-i18n="page_fruits">Культуры</h3><p>8 плодовых культур. Рекомендуемые плотности ульев, сроки цветения, прирост урожая с опылением.</p><div style="margin-top:.8rem"><span class="tag tag-orange">8 культур</span></div></div>
+        <div class="card card-stripe" onclick="showPage('calculator')" style="cursor:pointer"><span class="card-icon">🧮</span><h3 data-i18n="page_calc">Калькулятор</h3><p>Расчёт дозировки препаратов, оценка риска для пчёл (LD50), рекомендации по плотности ульев и прогноз прироста урожая.</p><div style="margin-top:.8rem"><span class="tag tag-blue">3 модуля</span></div></div>
+        <div class="card card-stripe" onclick="showPage('archive')" style="cursor:pointer"><span class="card-icon">🗂️</span><h3 data-i18n="page_archive">Архив & Сообщество</h3><p>База знаний, пополняемая агрономами и исследователями. Добавляйте наблюдения, данные, рекомендации через свой аккаунт.</p><div style="margin-top:.8rem"><span class="tag tag-green">Публичный</span><span class="tag tag-gold">Аккаунт</span></div></div>
+        <div class="card card-stripe" onclick="showPage('seo')" style="cursor:pointer"><span class="card-icon">🔍</span><h3 data-i18n="page_seo">SEO Руководство</h3><p>Пошаговое руководство по регистрации в Google Search Console, Yandex Вебмастер и Bing Webmaster.</p><div style="margin-top:.8rem"><span class="tag tag-purple">Пошагово</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY STATS -->
+  <section>
+    <div class="container">
+      <div class="section-title"><h2>Ключевые показатели</h2><div class="line"></div></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-bottom:3rem">
+        <div class="stat-block"><div class="big">+11–26%</div><div class="unit">прирост яблок</div><div class="desc">Apis mellifera</div></div>
+        <div class="stat-block"><div class="big">5.6×</div><div class="unit">завязей больше</div><div class="desc">vs самоопыление</div></div>
+        <div class="stat-block"><div class="big">+15%</div><div class="unit">завязываемость</div><div class="desc">Apis + Bombus вместе</div></div>
+        <div class="stat-block"><div class="big">40%</div><div class="unit">снижение визитов</div><div class="desc">субдозы имидаклоприда</div></div>
+        <div class="stat-block"><div class="big">85%</div><div class="unit">снижение гнезда</div><div class="desc">Bombus + имидаклоприд</div></div>
+        <div class="stat-block"><div class="big">19 лет</div><div class="unit">в почве</div><div class="desc">клотианидин (макс.)</div></div>
+      </div>
+      <div class="grid-2">
+        <div><h3 style="color:var(--c-gold-l);margin-bottom:1rem;font-size:1.05rem">Токсичность классов пестицидов</h3><div style="height:300px"><canvas id="toxChart"></canvas></div></div>
+        <div><h3 style="color:var(--c-gold-l);margin-bottom:1rem;font-size:1.05rem">Доли опылителей яблони</h3><div style="height:300px"><canvas id="polChart"></canvas></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="section-alt2">
+    <div class="container">
+      <div class="section-title"><h2>Сезонный календарь ЦА</h2><div class="line"></div><p>Активность опылителей и сроки обработки</p></div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot" style="background:var(--c-gold)"></div><h4>Конец марта – апрель: Ранние опылители</h4><p>Bombus spp. и Osmia spp. начинают лёт при t ≥5–8°C. Первыми опыляют <strong>абрикос, сливу, грушу, яблоню</strong>. 🚫 Обработки пестицидами строго запрещены.</p></div>
+        <div class="tl-item"><div class="tl-dot"></div><h4>Апрель – май: Пик активности</h4><p>Apis mellifera (≥10–12°C) + Andrena spp. Массовое цветение. Рекомендуемая плотность: <strong>2–4 семьи/га</strong> для яблони. ✅ Обработки только ночью.</p></div>
+        <div class="tl-item"><div class="tl-dot" style="background:var(--c-primary-l)"></div><h4>Май – июнь: Персик, нектарин, черешня</h4><p>Apis продолжает активную работу. Осторожно с системными инсектицидами — остатки в нектаре и пыльце.</p></div>
+        <div class="tl-item"><div class="tl-dot" style="background:var(--c-accent)"></div><h4>Июнь – август: Летний период</h4><p>Lasioglossum и Halictus активны (персик, поздний абрикос). Основные обработки фунгицидами. Неоникотиноиды системные — опасны.</p></div>
+        <div class="tl-item"><div class="tl-dot" style="background:var(--c-orange)"></div><h4>Август – октябрь: Завершение сезона</h4><p>Пчёлы готовятся к зимовке. Остатки пестицидов в воске влияют на зимостойкость. Гербициды под урожай.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== PESTICIDES ===================== -->
+<div id="page-pesticides" class="page">
+  <section style="padding-top:5rem">
+    <div class="container">
+      <div class="section-title"><h2 data-i18n="page_pesticides">🧪 Классы пестицидов</h2><div class="line"></div><p>Применяемые в теплицах и на открытом грунте Центральной Азии</p></div>
+      <div class="alert alert-warning"><span class="alert-icon">⚠️</span><div>Основные классы пестицидов ЦА — системные <strong>неоникотиноиды</strong>, пиретроиды, ФОС/карбаматы, стробилуриновые и азольные фунгициды, глифосатные гербициды, акарициды. Неоникотиноиды представляют наибольшую угрозу для опылителей.</div></div>
+      <div class="tabs" style="margin-top:1.5rem">
+        <button class="tab-btn active" onclick="openTab(this,'t-neo')">🔴 Неоникотиноиды</button>
+        <button class="tab-btn" onclick="openTab(this,'t-pyr')">🟠 Пиретроиды</button>
+        <button class="tab-btn" onclick="openTab(this,'t-op')">🔴 ФОС / Карбаматы</button>
+        <button class="tab-btn" onclick="openTab(this,'t-fung')">🔵 Фунгициды</button>
+        <button class="tab-btn" onclick="openTab(this,'t-herb')">🟢 Гербициды</button>
+        <button class="tab-btn" onclick="openTab(this,'t-acar')">🟣 Акарициды</button>
+      </div>
+
+      <div id="t-neo" class="tab-pane active">
+        <div class="hl-box"><h4>🔴 Неоникотиноиды — наиболее опасный класс для опылителей</h4><p>Системные инсектициды. Блокируют никотин-ацетилхолиновые рецепторы (nAChR). Обнаруживаются в нектаре (до 15 мкг/кг) и пыльце (до 100 мкг/кг). Клотианидин сохраняется в почве до 19 лет.</p></div>
+        <div class="table-wrap"><table><thead><tr><th>Вещество</th><th>Торговые марки</th><th>LD50 (нг/пчела)</th><th>Период в почве</th><th>Культура</th><th>Риск</th></tr></thead><tbody>
+          <tr><td>Имидаклоприд</td><td>Конфидор, Гаучо</td><td>3.7–40.9</td><td>48–190 дней</td><td>Овощи, зерновые</td><td><span class="pill pill-red">КРИТИЧЕСКИЙ</span></td></tr>
+          <tr><td>Клотианидин</td><td>Понч, Дантоп</td><td>3.8–22.9</td><td>до 19 лет</td><td>Зерновые (протравитель)</td><td><span class="pill pill-red">КРИТИЧЕСКИЙ</span></td></tr>
+          <tr><td>Тиаметоксам</td><td>Актара, Круйзер</td><td>4.9–6.4</td><td>7–35 дней</td><td>Овощи, сады</td><td><span class="pill pill-red">КРИТИЧЕСКИЙ</span></td></tr>
+          <tr><td>Ацетамиприд</td><td>Моспилан</td><td>8.09–14.5</td><td>1–8 дней</td><td>Плодовые, овощи</td><td><span class="pill pill-orange">ВЫСОКИЙ</span></td></tr>
+          <tr><td>Тиаклоприд</td><td>Калипсо</td><td>17.3–38.6</td><td>3–7 дней</td><td>Плодовые</td><td><span class="pill pill-orange">ВЫСОКИЙ</span></td></tr>
+        </tbody></table></div>
+        <div class="acc-item" style="margin-top:1rem"><div class="acc-head" onclick="toggleAcc(this)"><span>📊 Сублетальные эффекты</span><span class="acc-icon">+</span></div><div class="acc-body"><div class="acc-content"><ul style="list-style:disc;padding-left:1.5rem;line-height:2.1"><li>Снижение визитов к цветкам на <strong>40%</strong> при субдозах имидаклоприда</li><li>Нарушение навигации и потеря пчёл (GPS-трекинг)</li><li>Снижение веса гнезда Bombus на <strong>85%</strong> (Whitehorn et al., 2012, Science)</li><li>Подавление иммунитета: синергизм с Nosema ceranae в 4–5 раз</li><li>Накопление в воске: хроническое отравление колонии</li></ul></div></div></div>
+      </div>
+
+      <div id="t-pyr" class="tab-pane">
+        <div class="hl-box"><h4>🟠 Пиретроиды — контактно-кинетические токсины</h4><p>Воздействуют на потенциал-зависимые натриевые каналы нейронов. Высокотоксичны при контакте, но быстро деградируют под УФ. В теплицах (защита от УФ) период действия значительно увеличивается.</p></div>
+        <div class="table-wrap"><table><thead><tr><th>Вещество</th><th>Марки</th><th>LD50 контакт (мкг)</th><th>Применение</th><th>Риск</th></tr></thead><tbody>
+          <tr><td>Дельтаметрин</td><td>Децис, Децис Профи</td><td>0.0019–0.002</td><td>Хлопок, овощи, сады</td><td><span class="pill pill-red">КРИТИЧЕСКИЙ</span></td></tr>
+          <tr><td>Циперметрин</td><td>Арриво, Циткор</td><td>0.02–0.04</td><td>Хлопок, зерновые</td><td><span class="pill pill-red">КРИТИЧЕСКИЙ</span></td></tr>
+          <tr><td>Λ-цигалотрин</td><td>Каратэ Зеон</td><td>0.038–0.09</td><td>Широкий спектр</td><td><span class="pill pill-red">КРИТИЧЕСКИЙ</span></td></tr>
+          <tr><td>Перметрин</td><td>Командо</td><td>0.029–0.14</td><td>Овощи, сады</td><td><span class="pill pill-red">КРИТИЧЕСКИЙ</span></td></tr>
+          <tr><td>Альфа-циперметрин</td><td>Фастак</td><td>0.01–0.02</td><td>Плодовые, зерновые</td><td><span class="pill pill-red">КРИТИЧЕСКИЙ</span></td></tr>
+        </tbody></table></div>
+      </div>
+
+      <div id="t-op" class="tab-pane">
+        <div class="hl-box"><h4>🔴 ФОС и Карбаматы — ингибиторы АХЭ</h4><p>Необратимо (ФОС) или обратимо (карбаматы) ингибируют ацетилхолинэстеразу. Очень высокая острая токсичность для всех насекомых.</p></div>
+        <div class="table-wrap"><table><thead><tr><th>Класс / Вещество</th><th>Марки</th><th>LD50 (мкг/пчела)</th><th>Применение</th><th>Риск</th></tr></thead><tbody>
+          <tr><td colspan="5" style="text-align:center;color:var(--c-gold);font-weight:700;font-size:.82rem">ФОСФОРОРГАНИЧЕСКИЕ (ФОС)</td></tr>
+          <tr><td>Хлорпирифос</td><td>Дурсбан, ПИ-50</td><td>0.059–0.114</td><td>Хлопок, сады</td><td><span class="pill pill-red">КРИТИЧЕСКИЙ</span></td></tr>
+          <tr><td>Диметоат</td><td>Рогор, Би-58</td><td>0.15–0.29</td><td>Тли, клещи</td><td><span class="pill pill-red">КРИТИЧЕСКИЙ</span></td></tr>
+          <tr><td>Малатион</td><td>Карбофос</td><td>0.18</td><td>Овощи, сады</td><td><span class="pill pill-red">КРИТИЧЕСКИЙ</span></td></tr>
+          <tr><td colspan="5" style="text-align:center;color:var(--c-gold);font-weight:700;font-size:.82rem">КАРБАМАТЫ</td></tr>
+          <tr><td>Карбарил</td><td>Севин</td><td>0.18</td><td>Сады, овощи</td><td><span class="pill pill-red">КРИТИЧЕСКИЙ</span></td></tr>
+          <tr><td>Метомил</td><td>Ланнат</td><td>0.14</td><td>Листогрызущие</td><td><span class="pill pill-red">КРИТИЧЕСКИЙ</span></td></tr>
+        </tbody></table></div>
+      </div>
+
+      <div id="t-fung" class="tab-pane">
+        <div class="hl-box" style="border-color:rgba(66,165,245,.3)"><h4>🔵 Фунгициды — косвенные и сублетальные эффекты</h4><p>Прямая токсичность обычно низкая, но азолы и стробилурины подавляют детоксикационные ферменты CYP450 пчёл, усиливая токсичность инсектицидов в 5–1141 раз.</p></div>
+        <div class="alert alert-warning"><span class="alert-icon">⚠️</span><div><strong>Синергизм!</strong> Проциназол + имидаклоприд: LC50 снижается в 35 раз. Никогда не смешивайте азолы с неоникотиноидами.</div></div>
+        <div class="table-wrap"><table><thead><tr><th>Группа / Вещество</th><th>Марки</th><th>Механизм</th><th>Риск</th></tr></thead><tbody>
+          <tr><td>Азоксистробин</td><td>Квадрис, Амистар</td><td>Блокирует cyt bc1-комплекс митохондрий</td><td><span class="pill pill-yellow">Сублет.</span></td></tr>
+          <tr><td>Тебуконазол</td><td>Фоликур</td><td>Ингибирование С14-деметилазы</td><td><span class="pill pill-green">Низкий</span></td></tr>
+          <tr><td>Хлороталонил</td><td>Даконил</td><td>Нарушение клеточных тиолов</td><td><span class="pill pill-orange">Высокий субл.</span></td></tr>
+          <tr><td>Боскалид</td><td>Куммулус</td><td>Ингибирование сукцинатдегидрогеназы</td><td><span class="pill pill-yellow">Умеренный</span></td></tr>
+        </tbody></table></div>
+      </div>
+
+      <div id="t-herb" class="tab-pane">
+        <div class="hl-box" style="border-color:rgba(76,175,80,.3)"><h4>🟢 Гербициды — прямой риск невысокий, но есть нюансы</h4><p>Специфически ингибируют ферменты растений. Главные угрозы — уничтожение кормовой базы и воздействие глифосата на кишечную микробиоту пчёл (Motta et al., 2018, PNAS).</p></div>
+        <div class="table-wrap"><table><thead><tr><th>Вещество</th><th>Марки</th><th>Механизм</th><th>Косвенный риск</th></tr></thead><tbody>
+          <tr><td>Глифосат</td><td>Раундап, Ураган</td><td>Ингибирование EPSP-синтазы</td><td><span class="pill pill-orange">Микробиота кишечника</span></td></tr>
+          <tr><td>2,4-Д</td><td>Эстерон</td><td>Синтетический ауксин</td><td><span class="pill pill-yellow">Уничтожение медоносов</span></td></tr>
+          <tr><td>Атразин</td><td>Гезагард</td><td>Ингибирование PSII</td><td><span class="pill pill-yellow">Уничтожение медоносов</span></td></tr>
+          <tr><td>Метрибузин</td><td>Зенкор</td><td>Ингибирование PSII</td><td><span class="pill pill-green">Низкий прямой</span></td></tr>
+        </tbody></table></div>
+      </div>
+
+      <div id="t-acar" class="tab-pane">
+        <div class="hl-box" style="border-color:rgba(171,71,188,.3)"><h4>🟣 Акарициды — широкий диапазон безопасности</h4><p>От практически безопасных (клофентезин, гекситиазокс) до очень токсичных (абамектин: LD50 = 0.002 мкг/пчела).</p></div>
+        <div class="table-wrap"><table><thead><tr><th>Вещество</th><th>Марки</th><th>Механизм</th><th>Токсичность для пчёл</th></tr></thead><tbody>
+          <tr><td>Абамектин</td><td>Вертимек</td><td>Активатор Cl⁻-каналов</td><td><span class="pill pill-red">ОЧЕНЬ ВЫСОКАЯ</span></td></tr>
+          <tr><td>Клофентезин</td><td>Аполло</td><td>Нарушение линьки</td><td><span class="pill pill-green">Практически нетоксичен</span></td></tr>
+          <tr><td>Гекситиазокс</td><td>Ниссоран</td><td>Нарушение линьки</td><td><span class="pill pill-green">Низкая</span></td></tr>
+          <tr><td>Спиромезифен</td><td>Оберон</td><td>Ингибирование синтеза липидов</td><td><span class="pill pill-green">Низкая</span></td></tr>
+          <tr><td>Амитраз</td><td>Митак</td><td>Агонист октопамина</td><td><span class="pill pill-yellow">Умеренная</span></td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== POLLINATORS ===================== -->
+<div id="page-pollinators" class="page">
+  <section style="padding-top:5rem">
+    <div class="container">
+      <div class="section-title"><h2 data-i18n="page_pollinators">🐝 Опылители</h2><div class="line"></div><p>Видовой состав, температурные пороги, сезонный календарь Центральной Азии</p></div>
+      <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:2.5rem">
+        <div class="spec-card"><div class="spec-emoji">🍯</div><div class="spec-info"><h4>Apis mellifera — Медоносная пчела</h4><p>Активность: Апрель – Октябрь · Мин. t: ≥10–12°C · Оптимум: 20–30°C. Основной промышленный опылитель. Опыление увеличивает массу яблок на +11–26% и число завязей в 5.6×. Рекомендуемая плотность: 2–8 семей/га.</p><div style="margin-top:.5rem"><span class="tag tag-gold">Управляемая</span><span class="tag tag-red">Чувствительна к неоник.</span></div></div></div>
+        <div class="spec-card"><div class="spec-emoji">🐝</div><div class="spec-info"><h4>Bombus spp. — Шмели</h4><p>Активность: Конец марта – Сентябрь · Мин. t: ≥5–8°C · Оптимум: ~15–20°C. Незаменимы при низких температурах. Добавление B. terrestris к Apis повышает завязываемость яблок на +15%. Используют «баззинг» (вибрационное опыление).</p><div style="margin-top:.5rem"><span class="tag tag-green">Холодостойкие</span><span class="tag tag-blue">Теплицы</span></div></div></div>
+        <div class="spec-card"><div class="spec-emoji">🏗️</div><div class="spec-info"><h4>Osmia spp. — Пчёлы-каменщицы</h4><p>Активность: Март – Июнь · Мин. t: ≥10°C. Лучший опылитель яблони и вишни в плохую погоду. Одна осмия заменяет ~120 медоносных пчёл по эффективности опыления яблони. Гнездятся в трубках и стеблях.</p><div style="margin-top:.5rem"><span class="tag tag-gold">×120 эффективность</span></div></div></div>
+        <div class="spec-card"><div class="spec-emoji">🌍</div><div class="spec-info"><h4>Andrena spp. — Земляные пчёлы</h4><p>Активность: Апрель – Май · Мин. t: ≥10–12°C. Специализированные весенние опылители. >100 видов в регионе ЦА. Гнездятся в земле — уязвимы к почвенным пестицидам (хлорпирифос, системные неоникотиноиды).</p><div style="margin-top:.5rem"><span class="tag tag-red">Уязвимы к ФОС</span></div></div></div>
+        <div class="spec-card"><div class="spec-emoji">✨</div><div class="spec-info"><h4>Lasioglossum / Halictus — Галиктиды</h4><p>Активность: Апрель – Сентябрь · Летний пик. Важны для опыления персика и позднего абрикоса. Маленький размер позволяет опылять цветки с узкими венчиками. ~1000 видов в мире.</p><div style="margin-top:.5rem"><span class="tag tag-blue">Лето</span><span class="tag tag-orange">Персик, абрикос</span></div></div></div>
+      </div>
+      <h3 style="color:var(--c-gold-l);margin-bottom:1rem">Сезонная активность</h3>
+      <div style="height:360px"><canvas id="seasonChart"></canvas></div>
+      <div class="table-wrap" style="margin-top:2rem"><table><thead><tr><th>Вид</th><th>Начало лёта</th><th>Оптимум</th><th>Сезон в ЦА</th><th>Особенности</th></tr></thead><tbody>
+        <tr><td>Apis mellifera</td><td>≥10–12°C</td><td>20–30°C</td><td>Апр–Окт</td><td>Управляемая, широкий диапазон</td></tr>
+        <tr><td>Bombus terrestris</td><td>≥5–8°C</td><td>15–20°C</td><td>Кон.Март–Сент</td><td>Холодостойкий, виброопыление</td></tr>
+        <tr><td>Osmia cornuta</td><td>≥10°C</td><td>12–25°C</td><td>Март–Июнь</td><td>Лучший опылитель яблони</td></tr>
+        <tr><td>Andrena spp.</td><td>≥10–12°C</td><td>15–22°C</td><td>Апр–Май</td><td>Почвенное гнездование</td></tr>
+        <tr><td>Lasioglossum</td><td>≥10°C</td><td>18–28°C</td><td>Апр–Сент</td><td>Летний пик, персик</td></tr>
+      </tbody></table></div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== FRUITS ===================== -->
+<div id="page-fruits" class="page">
+  <section style="padding-top:5rem">
+    <div class="container">
+      <div class="section-title"><h2 data-i18n="page_fruits">🍎 Плодовые культуры</h2><div class="line"></div><p>Рекомендации по опылению, плотность ульев, сроки цветения</p></div>
+      <div class="alert alert-success"><span class="alert-icon">✅</span><div>Опыление Apis mellifera увеличивает массу яблок на <strong>+11–26%</strong> и число завязей в <strong>5.6 раза</strong>. Добавление Bombus terrestris повышает завязываемость ещё на <strong>+15%</strong>.</div></div>
+      <div class="table-wrap" style="margin-top:1.5rem"><table><thead><tr><th>Культура</th><th>Цветение (ЦА)</th><th>Ульев/га</th><th>Главные опылители</th><th>+Урожай</th><th>Особенности</th></tr></thead><tbody>
+        <tr><td>🍎 Яблоня</td><td>Апр – нач.Мая</td><td>2–4</td><td>Apis, Osmia</td><td>+11–26%</td><td>Требует перекрёстного опыления</td></tr>
+        <tr><td>🍐 Груша</td><td>Март – Апр</td><td>2–4</td><td>Apis, Bombus</td><td>+20%</td><td>Ранее цветение → шмели ключевые</td></tr>
+        <tr><td>🍒 Черешня</td><td>Апрель</td><td>3–5</td><td>Apis, Osmia</td><td>+35%</td><td>Самобесплодна! Нужны сорта-опылители</td></tr>
+        <tr><td>🍒 Вишня</td><td>Апр – Май</td><td>2–3</td><td>Apis, Osmia</td><td>+28%</td><td>Частично самоплодна</td></tr>
+        <tr><td>🍑 Абрикос</td><td>Март – Апр</td><td>2–3</td><td>Bombus, Osmia</td><td>+18%</td><td>Раннее цветение, нужны холодостойкие</td></tr>
+        <tr><td>🍑 Персик</td><td>Апр – Май</td><td>1–2</td><td>Apis, Lasioglossum</td><td>+12%</td><td>В основном самоплоден</td></tr>
+        <tr><td>🫐 Слива</td><td>Апрель</td><td>2–4</td><td>Apis, Bombus</td><td>+22%</td><td>Частично самобесплодна</td></tr>
+        <tr><td>🍑 Нектарин</td><td>Апр – Май</td><td>1–2</td><td>Apis</td><td>+12%</td><td>Самоплоден, опылители повышают завязь</td></tr>
+      </tbody></table></div>
+      <h3 style="color:var(--c-gold-l);margin:2.5rem 0 1rem">Сроки цветения</h3>
+      <div style="height:360px"><canvas id="bloomChart"></canvas></div>
+      <div class="cards-grid" style="margin-top:2rem">
+        <div class="card"><span class="card-icon">📊</span><h3>Яблоня — ключевые данные</h3>
+          <div class="prog-item"><div class="prog-label"><span>Завязь (Apis)</span><span>~80%</span></div><div class="prog-bar"><div class="prog-fill" style="width:80%"></div></div></div>
+          <div class="prog-item"><div class="prog-label"><span>Завязь (самоопыление)</span><span>~15%</span></div><div class="prog-bar"><div class="prog-fill" style="width:15%;background:linear-gradient(90deg,#ef9a9a,#f44336)"></div></div></div>
+          <div class="prog-item"><div class="prog-label"><span>Apis + Bombus</span><span>~90%</span></div><div class="prog-bar"><div class="prog-fill" style="width:90%"></div></div></div>
+        </div>
+        <div class="card"><span class="card-icon">⚠️</span><h3>Критические ошибки</h3>
+          <div class="alert alert-danger" style="margin:.5rem 0;font-size:.85rem"><span class="alert-icon">🚫</span><div>Неоникотиноиды во время цветения → потеря всего урожая</div></div>
+          <div class="alert alert-danger" style="margin:.5rem 0;font-size:.85rem"><span class="alert-icon">🚫</span><div>Обработка Децисом/Каратэ днём → массовая гибель пчёл</div></div>
+          <div class="alert alert-warning" style="margin:.5rem 0;font-size:.85rem"><span class="alert-icon">⚠️</span><div>Фунгициды + инсектициды одновременно → синергизм токсичности</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== RISKS ===================== -->
+<div id="page-risks" class="page">
+  <section style="padding-top:5rem">
+    <div class="container">
+      <div class="section-title"><h2 data-i18n="page_risks">⚠️ Риски и токсичность</h2><div class="line"></div><p>Летальные и сублетальные эффекты пестицидов на опылителей</p></div>
+      <div class="alert alert-danger"><span class="alert-icon">🚨</span><div>По данным FAO и IPBES, численность диких опылителей снижается на 30–70% в сельхозрегионах. Неоникотиноиды — главная причина CCD (коллапс колоний). В 2018 году ЕС запретил три основных неоникотиноида на открытом воздухе. В ЦА аналогичных ограничений нет.</div></div>
+      <div class="cards-grid" style="margin-top:1.5rem">
+        <div class="card"><span class="card-icon">🌸</span><h3>Нектар и пыльца</h3><p>Системные пестициды: нектар до <strong>15 мкг/кг</strong>, пыльца до <strong>100 мкг/кг</strong>. Хроническое отравление всей колонии через перга и мёд.</p></div>
+        <div class="card"><span class="card-icon">💧</span><h3>Гуттация</h3><p>Имидаклоприд в гуттации кукурузы: <strong>10–1000 мкг/л</strong>. В 10–100 раз больше, чем в почвенной воде. Критически опасна ранним утром.</p></div>
+        <div class="card"><span class="card-icon">💨</span><h3>Пылевые частицы</h3><p>Протравленные семена при посеве образуют пылевое облако. LD50 превышается при контакте с 1–5 частицами пыли.</p></div>
+        <div class="card"><span class="card-icon">🌱</span><h3>Почвенный путь</h3><p>Andrena гнездятся в почве. Клотианидин: <strong>148–6931 дней</strong> в почве. Имидаклоприд: 48–190 дней.</p></div>
+        <div class="card"><span class="card-icon">🏗️</span><h3>Гнездовые материалы</h3><p>Неоникотиноиды накапливаются в воске (до 20 ppb). Личинки подвергаются воздействию всё развитие → CCD.</p></div>
+        <div class="card"><span class="card-icon">🌿</span><h3>Прямой контакт</h3><p>Дельтаметрин на листьях: 5–7 дней. В теплице: до 14 дней. Острая гибель в течение часов при прямой обработке.</p></div>
+      </div>
+      <h3 style="color:var(--c-gold-l);margin:2.5rem 0 1rem">Сравнение LD50 для Apis mellifera</h3>
+      <div style="height:400px"><canvas id="ld50Chart"></canvas></div>
+      <p style="color:var(--c-text3);font-size:.8rem;margin-top:.7rem;text-align:center">*Меньшее LD50 = большая токсичность. Оральный путь воздействия.</p>
+      <div style="margin-top:2.5rem">
+        <h3 style="color:var(--c-gold-l);margin-bottom:1rem">Сублетальные и системные эффекты</h3>
+        <div class="acc-item"><div class="acc-head" onclick="toggleAcc(this)"><span>🧠 Нарушение навигации и обучения</span><span class="acc-icon">+</span></div><div class="acc-body"><div class="acc-content"><ul style="list-style:disc;padding-left:1.5rem;line-height:2.2"><li>Снижение визитов к цветкам на <strong>40%</strong></li><li>Потеря ориентации при возврате в улей (+9% потерянных пчёл с GPS)</li><li>PER-обучение снижено на 60%</li><li>Вербальные танцы менее точны</li></ul></div></div></div>
+        <div class="acc-item"><div class="acc-head" onclick="toggleAcc(this)"><span>👑 Репродуктивные нарушения шмелей</span><span class="acc-icon">+</span></div><div class="acc-body"><div class="acc-content"><ul style="list-style:disc;padding-left:1.5rem;line-height:2.2"><li>Имидаклоприд 6 ppb: снижение веса гнезда B.terrestris на <strong>85%</strong></li><li>Тиаметоксам: снижение возвращаемости маток в 2.3 раза</li><li>Уменьшение числа половых особей в колонии</li></ul></div></div></div>
+        <div class="acc-item"><div class="acc-head" onclick="toggleAcc(this)"><span>🔥 CCD — Коллапс медоносных колоний</span><span class="acc-icon">+</span></div><div class="acc-body"><div class="acc-content"><p>Рабочие пчёлы исчезают, оставляя матку и расплод. Причины:</p><ul style="list-style:disc;padding-left:1.5rem;margin-top:.7rem;line-height:2.2"><li>Нарушение навигации → пчёлы не возвращаются</li><li>Иммуносупрессия → Nosema + вирусы в ослабленных колониях</li><li>Накопление в воске → хроническое отравление расплода</li><li><strong>ЕС запретил</strong> имидаклоприд, клотианидин, тиаметоксам (2018)</li></ul></div></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== CALCULATOR ===================== -->
+<div id="page-calculator" class="page">
+  <section style="padding-top:5rem">
+    <div class="container">
+      <div class="section-title"><h2 data-i18n="page_calc">🧮 Калькулятор</h2><div class="line"></div><p data-i18n="calc_title">Калькулятор пестицидов и опылителей</p></div>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="openTab(this,'calc-dos')"><i class="fas fa-flask"></i> <span data-i18n="calc_tab1">Дозировка</span></button>
+        <button class="tab-btn" onclick="openTab(this,'calc-risk')"><i class="fas fa-skull-crossbones"></i> <span data-i18n="calc_tab2">Риск для пчёл</span></button>
+        <button class="tab-btn" onclick="openTab(this,'calc-hive')"><i class="fas fa-home"></i> <span data-i18n="calc_tab3">Ульи / га</span></button>
+        <button class="tab-btn" onclick="openTab(this,'calc-syn');initSynergyCalc()"><i class="fas fa-flask-vial"></i> <span data-i18n="calc_tab4">Синергизм</span></button>
+      </div>
+
+      <!-- DOSAGE -->
+      <div id="calc-dos" class="tab-pane active">
+        <div class="grid-2">
+          <div class="calc-card">
+            <h3 style="margin-bottom:1.2rem;color:var(--c-gold-l)"><i class="fas fa-flask"></i> Расчёт дозировки</h3>
+            <div class="form-group"><label class="form-label" data-i18n="calc_area">Площадь обработки (га)</label><input id="c_area" class="form-input" type="number" min="0.1" step="0.1" placeholder="5.0"/></div>
+            <div class="form-group"><label class="form-label" data-i18n="calc_conc">Концентрация препарата (%)</label><input id="c_conc" class="form-input" type="number" min="0.01" step="0.01" placeholder="0.5"/></div>
+            <div class="form-group"><label class="form-label" data-i18n="calc_rate">Норма расхода воды (л/га)</label><input id="c_rate" class="form-input" type="number" min="50" step="50" placeholder="300"/></div>
+            <button class="btn btn-primary" onclick="CALC.calcDosage()" style="width:100%"><i class="fas fa-calculator"></i> <span data-i18n="calc_btn">Рассчитать</span></button>
+          </div>
+          <div class="calc-result" id="calcDosResult" style="display:none">
+            <h4 style="color:var(--c-gold-l);margin-bottom:1rem">📊 Результат</h4>
+            <div style="display:grid;gap:.8rem">
+              <div style="background:var(--c-card);border-radius:var(--r-sm);padding:1rem"><div style="font-size:.8rem;color:var(--c-text3)">Всего воды</div><div class="big-num" id="cr_water">—</div></div>
+              <div style="background:var(--c-card);border-radius:var(--r-sm);padding:1rem"><div style="font-size:.8rem;color:var(--c-text3)">Нужно препарата (кг/л)</div><div class="big-num" id="cr_prep">—</div></div>
+              <div style="background:var(--c-card);border-radius:var(--r-sm);padding:1rem"><div style="font-size:.8rem;color:var(--c-text3)">Д.в. в рабочем растворе</div><div class="big-num" id="cr_ai">—</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BEE RISK -->
+      <div id="calc-risk" class="tab-pane">
+        <div class="grid-2">
+          <div class="calc-card">
+            <h3 style="margin-bottom:1.2rem;color:var(--c-gold-l)"><i class="fas fa-skull-crossbones"></i> Оценка риска для пчёл</h3>
+            <div class="form-group"><label class="form-label" data-i18n="calc_substance">Действующее вещество</label><select id="c_substance" class="form-select"><option value="">— Выберите вещество —</option></select></div>
+            <div class="form-group"><label class="form-label" data-i18n="calc_bees_exp">Воздействие (нг/пчела)</label><input id="c_bees_exp" class="form-input" type="number" min="0.001" step="0.001" placeholder="2.5"/><span class="form-helper">Типичное полевое воздействие 0.1–10 нг/пчела</span></div>
+            <button class="btn btn-primary" onclick="CALC.calcRisk()" style="width:100%"><i class="fas fa-calculator"></i> Рассчитать</button>
+          </div>
+          <div class="calc-result" id="calcRiskResult" style="display:none">
+            <h4 style="color:var(--c-gold-l);margin-bottom:1rem">🐝 Результат оценки</h4>
+            <div style="display:grid;gap:.7rem">
+              <div style="background:var(--c-card);border-radius:var(--r-sm);padding:.8rem 1rem"><div style="font-size:.78rem;color:var(--c-text3)">LD50 (оральный)</div><div style="font-weight:800;color:var(--c-text)" id="cr_ld50">—</div></div>
+              <div style="background:var(--c-card);border-radius:var(--r-sm);padding:.8rem 1rem"><div style="font-size:.78rem;color:var(--c-text3)">Класс пестицида</div><div style="font-weight:800;color:var(--c-text)" id="cr_class">—</div></div>
+              <div style="background:var(--c-card);border-radius:var(--r-sm);padding:.8rem 1rem"><div style="font-size:.78rem;color:var(--c-text3)">Отношение воздействие/LD50</div><div style="font-size:1.6rem;font-weight:900;color:var(--c-gold-l)" id="cr_ratio">—</div></div>
+              <div style="background:var(--c-card);border-radius:var(--r-sm);padding:.8rem 1rem"><div style="font-size:.78rem;color:var(--c-text3);margin-bottom:.4rem">Уровень риска</div><div style="font-size:1.2rem;font-weight:900" id="cr_risk">—</div><div class="prog-bar" style="margin-top:.5rem"><div id="cr_bar" class="prog-fill" style="width:0%"></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HIVES -->
+      <div id="calc-hive" class="tab-pane">
+        <div class="grid-2">
+          <div class="calc-card">
+            <h3 style="margin-bottom:1.2rem;color:var(--c-gold-l)"><i class="fas fa-home"></i> Расчёт ульев и прироста урожая</h3>
+            <div class="form-group"><label class="form-label" data-i18n="calc_crop">Культура</label><select id="c_crop" class="form-select"><option value="">— Выберите культуру —</option></select></div>
+            <div class="form-group"><label class="form-label">Площадь сада (га)</label><input id="c_hive_area" class="form-input" type="number" min="0.1" step="0.1" placeholder="3.0"/></div>
+            <div class="form-group"><label class="form-label" data-i18n="calc_yield_exp">Ожидаемый базовый урожай (т/га)</label><input id="c_yield" class="form-input" type="number" min="0" step="0.5" placeholder="15"/><span class="form-helper">Оставьте 0 для расчёта только ульев</span></div>
+            <button class="btn btn-primary" onclick="CALC.calcHives()" style="width:100%"><i class="fas fa-calculator"></i> Рассчитать</button>
+          </div>
+          <div class="calc-result" id="calcHiveResult" style="display:none">
+            <h4 style="color:var(--c-gold-l);margin-bottom:1rem">🍎 Результат</h4>
+            <div style="display:grid;gap:.7rem">
+              <div style="background:var(--c-card);border-radius:var(--r-sm);padding:.8rem 1rem"><div style="font-size:.78rem;color:var(--c-text3)">Норма ульев на га</div><div style="font-weight:800;color:var(--c-text)" id="cr_hive_need">—</div></div>
+              <div style="background:var(--c-card);border-radius:var(--r-sm);padding:.8rem 1rem"><div style="font-size:.78rem;color:var(--c-text3)">Всего ульев нужно</div><div style="font-size:1.8rem;font-weight:900;color:var(--c-gold-l)" id="cr_hives_total">—</div></div>
+              <div style="background:var(--c-card);border-radius:var(--r-sm);padding:.8rem 1rem"><div style="font-size:.78rem;color:var(--c-text3)">Прирост урожая с опылением</div><div style="font-size:1.4rem;font-weight:900;color:var(--c-primary-l)" id="cr_gain_pct">—</div></div>
+              <div style="background:var(--c-card);border-radius:var(--r-sm);padding:.8rem 1rem"><div style="font-size:.78rem;color:var(--c-text3)">Абсолютный прирост (т/га)</div><div style="font-weight:700;color:var(--c-text2)" id="cr_gain_abs">—</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SYNERGY -->
+      <div id="calc-syn" class="tab-pane">
+        <div id="calc-synergy-content">
+          <div style="text-align:center;padding:3rem;color:var(--c-text3)"><p>Нажмите вкладку «Синергизм» для загрузки...</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div id="page-archive" class="page">
+  <section style="padding-top:5rem">
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:2rem">
+        <div><h2 style="font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800" data-i18n="arch_title">Архив & База знаний</h2><p style="color:var(--c-text3);margin-top:.3rem" data-i18n="arch_subtitle">Материалы от сообщества агрономов</p></div>
+        <button class="btn btn-primary" onclick="AUTH.isLoggedIn()?openModal('addPostModal'):openModal('loginModal')"><i class="fas fa-plus"></i> <span data-i18n="arch_add">Добавить</span></button>
+      </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+        <div class="search-wrap" style="margin:0;flex:1;min-width:200px"><span class="search-icon"><i class="fas fa-search"></i></span><input type="text" id="archSearch" data-i18n-ph="search_ph" placeholder="Поиск..." oninput="renderArchive()"/></div>
+        <select id="archFilter" class="form-select" style="min-width:180px;max-width:220px" onchange="renderArchive()">
+          <option value="">Все типы</option>
+          <option>Исследование</option><option>Наблюдение</option>
+          <option>Рекомендация</option><option>Данные поля</option><option>Вопрос</option>
+        </select>
+        <span style="align-self:center;color:var(--c-text3);font-size:.85rem">Записей: <strong id="archCount" style="color:var(--c-gold-l)">0</strong></span>
+      </div>
+      <div id="archiveFeed"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== PROFILE ===================== -->
+<div id="page-profile" class="page">
+  <section style="padding-top:5rem">
+    <div class="container-sm">
+      <div class="section-title"><h2 data-i18n="page_profile">👤 Профиль</h2><div class="line"></div></div>
+      <div id="profileContent"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== SEO GUIDE ===================== -->
+<div id="page-seo" class="page">
+  <section style="padding-top:5rem">
+    <div class="container">
+      <div class="section-title"><h2 data-i18n="seo_title">🔍 SEO Гид</h2><div class="line"></div><p data-i18n="seo_subtitle">Пошаговое руководство по индексации сайта</p></div>
+
+      <div class="alert alert-gold" style="margin-bottom:2rem"><span class="alert-icon">⭐</span><div>Это полное пошаговое руководство для вашего GitHub Pages сайта. Следуйте шагам — и ваш сайт появится в Google, Yandex и Bing в течение 1–4 недель.</div></div>
+
+      <!-- STEP 1: GitHub Pages -->
+      <h3 style="color:var(--c-gold-l);margin-bottom:1rem">📦 Шаг 1: Деплой на GitHub Pages</h3>
+      <div class="step-card"><div class="step-num">1</div><div class="step-body"><h4>Создайте репозиторий на GitHub</h4><p>Перейдите на <a href="https://github.com" target="_blank" style="color:var(--c-primary-l)">github.com</a> → кнопка <strong>New</strong> → назовите репозиторий <code>your-name.github.io</code> (для главного домена) или любое имя (для subdirectory).</p></div></div>
+      <div class="step-card"><div class="step-num">2</div><div class="step-body"><h4>Загрузите файлы</h4><p>Вариант A — через браузер: нажмите <strong>Add file → Upload files</strong> и перетащите все файлы проекта.<br>Вариант B — Git командная строка:</p>
+        <div style="background:var(--c-bg);border:1px solid var(--c-border);border-radius:var(--r-sm);padding:1rem;margin-top:.5rem;font-family:monospace;font-size:.82rem;color:var(--c-primary-l);position:relative">
+          <button onclick="copyCode('git init\ngit add .\ngit commit -m \"Initial commit\"\ngit remote add origin https://github.com/ВАШ_НИК/ВАШ_РЕПО.git\ngit push -u origin main')" style="position:absolute;right:.5rem;top:.5rem;background:none;border:1px solid var(--c-border);border-radius:4px;padding:.2rem .5rem;color:var(--c-text3);cursor:pointer;font-size:.72rem">📋 Copy</button>
+          git init<br>git add .<br>git commit -m "Initial commit"<br>git remote add origin https://github.com/ВАШ_НИК/ВАШ_РЕПО.git<br>git push -u origin main
+        </div>
+      </div></div>
+      <div class="step-card"><div class="step-num">3</div><div class="step-body"><h4>Включите GitHub Pages</h4><p>Перейдите в репозиторий → <strong>Settings</strong> → <strong>Pages</strong> → Section "Source" → <strong>Deploy from a branch</strong> → ветка <strong>main</strong> → папка <strong>/ (root)</strong> → нажмите <strong>Save</strong>.<br>Через 1–5 минут сайт будет доступен по адресу <code>https://ВАШ_НИК.github.io/ВАШ_РЕПО/</code></p></div></div>
+
+      <!-- STEP 2: Google Search Console -->
+      <h3 style="color:var(--c-gold-l);margin:2rem 0 1rem">🔍 Шаг 2: Google Search Console</h3>
+      <div class="step-card"><div class="step-num">4</div><div class="step-body"><h4>Перейдите в Google Search Console</h4><p>Откройте <a href="https://search.google.com/search-console" target="_blank" style="color:var(--c-primary-l)">search.google.com/search-console</a> → войдите с аккаунтом Google → нажмите <strong>«Добавить ресурс»</strong>.</p></div></div>
+      <div class="step-card"><div class="step-num">5</div><div class="step-body"><h4>Выберите тип ресурса</h4><p>Выберите <strong>«URL-prefix»</strong> (не "Domain") и введите полный URL вашего сайта:<br><code>https://ВАШ_НИК.github.io/ВАШ_РЕПО/</code></p></div></div>
+      <div class="step-card"><div class="step-num">6</div><div class="step-body"><h4>Верификация через HTML-тег</h4><p>Выберите метод <strong>«HTML tag»</strong>. Скопируйте код вида:<br><code>&lt;meta name="google-site-verification" content="ВАШИ_СИМВОЛЫ" /&gt;</code><br><br>Откройте файл <code>index.html</code> → найдите строку с <code>ВСТАВЬТЕ_ВАШ_VERIFICATION_CODE_ЗДЕСЬ</code> → замените на ваш код → сохраните → задеплойте (git push). Затем вернитесь в Search Console и нажмите <strong>«Подтвердить»</strong>.</p></div></div>
+      <div class="step-card"><div class="step-num">7</div><div class="step-body"><h4>Отправьте Sitemap</h4><p>После верификации: в левом меню → <strong>Sitemaps</strong> → в поле вставьте:<br><code>https://ВАШ_НИК.github.io/ВАШ_РЕПО/sitemap.xml</code><br>→ нажмите <strong>«Отправить»</strong>. Статус должен стать «Успешно».</p></div></div>
+      <div class="step-card"><div class="step-num">8</div><div class="step-body"><h4>Запросите индексацию</h4><p>В поле URL Inspection вверху введите URL главной страницы → нажмите <strong>«Запросить индексирование»</strong>. Первые страницы появятся в Google через <strong>3–14 дней</strong>.</p></div></div>
+
+      <!-- STEP 3: Yandex -->
+      <h3 style="color:var(--c-gold-l);margin:2rem 0 1rem">🔴 Шаг 3: Yandex Вебмастер</h3>
+      <div class="step-card"><div class="step-num">9</div><div class="step-body"><h4>Яндекс Вебмастер</h4><p>Перейдите на <a href="https://webmaster.yandex.ru" target="_blank" style="color:var(--c-primary-l)">webmaster.yandex.ru</a> → добавьте сайт → верифицируйте через HTML-тег (аналогично Google) → добавьте sitemap. Индексация: 1–3 недели.</p></div></div>
+
+      <!-- STEP 4: Bing -->
+      <h3 style="color:var(--c-gold-l);margin:2rem 0 1rem">🔵 Шаг 4: Bing Webmaster Tools</h3>
+      <div class="step-card"><div class="step-num">10</div><div class="step-body"><h4>Bing Webmaster Tools</h4><p>Перейдите на <a href="https://www.bing.com/webmasters" target="_blank" style="color:var(--c-primary-l)">bing.com/webmasters</a> → можно импортировать из Google Search Console одним кликом → Bing проиндексирует автоматически.</p></div></div>
+
+      <!-- STEP 5: SEO Tips -->
+      <h3 style="color:var(--c-gold-l);margin:2rem 0 1rem">💡 Шаг 5: SEO оптимизация</h3>
+      <div class="step-card"><div class="step-num">11</div><div class="step-body"><h4>Что уже сделано в этом проекте</h4><ul style="list-style:disc;padding-left:1.5rem;line-height:2.2"><li>✅ Мета-тег <code>description</code> с ключевыми словами на 3 языках</li><li>✅ Open Graph теги для соцсетей (Facebook, Telegram)</li><li>✅ Twitter Card для превью в Twitter</li><li>✅ JSON-LD структурированные данные (Schema.org)</li><li>✅ <code>sitemap.xml</code> со всеми страницами</li><li>✅ <code>robots.txt</code> с указанием sitemap</li><li>✅ PWA Manifest (повышает доверие поисковиков)</li><li>✅ Семантический HTML (h1, h2, article, nav)</li><li>✅ Быстрая загрузка (CDN, минимум запросов)</li></ul></div></div>
+      <div class="step-card"><div class="step-num">12</div><div class="step-body"><h4>Замените в index.html</h4><p>Найдите и замените все вхождения <code>your-username.github.io</code> на ваш реальный домен в файлах <code>index.html</code>, <code>sitemap.xml</code>, <code>robots.txt</code>.</p></div></div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== REFERENCES ===================== -->
+<div id="page-references" class="page">
+  <section style="padding-top:5rem">
+    <div class="container">
+      <div class="section-title"><h2 data-i18n="page_refs">📚 Источники</h2><div class="line"></div><p>Рецензируемые публикации, 2007–2023</p></div>
+      <div class="search-wrap"><span class="search-icon"><i class="fas fa-search"></i></span><input type="text" id="refSearch" placeholder="Поиск по автору, теме, году..." oninput="filterRefs()"/></div>
+      <div id="refList"></div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div style="display:flex;align-items:center;gap:.7rem;margin-bottom:.8rem">
+        <div style="width:36px;height:36px;background:linear-gradient(135deg,var(--c-primary),var(--c-gold));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem">🌱</div>
+        <span style="font-weight:800;font-size:.85rem;color:var(--c-gold)">ÖŇDE BARYJY ÝYLADYŞHANA</span>
+      </div>
+      <p data-i18n="foot_desc">Научный справочник для агрономов и фермеров Центральной Азии.</p>
+      <p style="margin-top:.7rem;font-size:.8rem;color:var(--c-muted)" data-i18n="foot_pwa">Работает онлайн и офлайн</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="foot_sections">Разделы</h4>
+      <ul>
+        <li><a href="#" onclick="showPage('pesticides');return false" data-i18n="nav_pesticides">Пестициды</a></li>
+        <li><a href="#" onclick="showPage('pollinators');return false" data-i18n="nav_pollinators">Опылители</a></li>
+        <li><a href="#" onclick="showPage('fruits');return false" data-i18n="nav_fruits">Культуры</a></li>
+        <li><a href="#" onclick="showPage('risks');return false" data-i18n="nav_risks">Риски</a></li>
+        <li><a href="#" onclick="showPage('calculator');return false" data-i18n="nav_calc">Калькулятор</a></li>
+        <li><a href="#" onclick="showPage('archive');return false" data-i18n="nav_archive">Архив</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="foot_topics">Темы</h4>
+      <ul>
+        <li><a href="#" onclick="showPage('pesticides');return false">Неоникотиноиды</a></li>
+        <li><a href="#" onclick="showPage('pollinators');return false">Apis mellifera</a></li>
+        <li><a href="#" onclick="showPage('pollinators');return false">Bombus spp.</a></li>
+        <li><a href="#" onclick="showPage('risks');return false">CCD синдром</a></li>
+        <li><a href="#" onclick="showPage('seo');return false" data-i18n="nav_seo">SEO Гид</a></li>
+        <li><a href="#" onclick="showPage('references');return false" data-i18n="nav_refs">Источники</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="foot_author">Автор</h4>
+      <p style="font-size:1.1rem;font-weight:800;color:var(--c-gold);margin-bottom:.5rem">yesenow dayanc</p>
+      <p style="font-size:.82rem;line-height:1.7">Разработчик и автор научного контента. Специализация: агрохимия, экология опылителей, Центральная Азия.</p>
+      <div style="margin-top:.8rem;display:flex;gap:.5rem">
+        <span class="tag tag-gold">2024</span>
+        <span class="tag tag-green">PWA</span>
+        <span class="tag tag-blue">RU/EN/TK</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p data-i18n="foot_copy">© 2024 ÖŇDE BARYJY ÝYLADYŞHANA · Все права защищены</p>
+    <div class="author-credit">
+      <i class="fas fa-code" style="color:var(--c-primary-l)"></i>
+      Создано <span class="name">yesenow dayanc</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== PWA INSTALL ========== -->
+<div id="installBanner">
+  <p style="font-size:.88rem;margin-bottom:.8rem;color:var(--c-text)">🌱 Установить <strong>ÖŇDE BARYJY</strong> как приложение?</p>
+  <div style="display:flex;gap:.5rem">
+    <button class="btn btn-primary btn-sm" onclick="installPWA()">Установить</button>
+    <button class="btn btn-outline btn-sm" onclick="document.getElementById('installBanner').style.display='none'">Нет</button>
+  </div>
+</div>
+
+<!-- ========== TOAST ========== -->
+<div id="toastContainer"></div>
+
+<!-- ========== SCRIPTS ========== -->
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

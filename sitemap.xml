@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Главная страница -->
+  <url>
+    <loc>https://your-username.github.io/onde-baryjy-yyladyshhana/</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://your-username.github.io/onde-baryjy-yyladyshhana/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://your-username.github.io/onde-baryjy-yyladyshhana/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="tk" href="https://your-username.github.io/onde-baryjy-yyladyshhana/?lang=tk"/>
+  </url>
+
+  <!-- Пестициды -->
+  <url>
+    <loc>https://your-username.github.io/onde-baryjy-yyladyshhana/?page=pesticides</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Опылители -->
+  <url>
+    <loc>https://your-username.github.io/onde-baryjy-yyladyshhana/?page=pollinators</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Плодовые культуры -->
+  <url>
+    <loc>https://your-username.github.io/onde-baryjy-yyladyshhana/?page=fruits</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Риски и токсичность -->
+  <url>
+    <loc>https://your-username.github.io/onde-baryjy-yyladyshhana/?page=risks</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Калькулятор -->
+  <url>
+    <loc>https://your-username.github.io/onde-baryjy-yyladyshhana/?page=calculator</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Архив / База знаний -->
+  <url>
+    <loc>https://your-username.github.io/onde-baryjy-yyladyshhana/?page=archive</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- SEO Руководство -->
+  <url>
+    <loc>https://your-username.github.io/onde-baryjy-yyladyshhana/?page=seo</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Источники / References -->
+  <url>
+    <loc>https://your-username.github.io/onde-baryjy-yyladyshhana/?page=references</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+</urlset>
